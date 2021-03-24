@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Empresa from './Empresa';
 import { useDispatch, useSelector } from 'react-redux';
 import { obtenerEmpresasAction } from '../actions/empresasActions';
-import Loading from './Loading';
+import { BoxLoading } from 'react-loadingg';
 
 
 const ListadoEmpresas = () => {
@@ -47,7 +47,7 @@ const ListadoEmpresas = () => {
                
 
                 {error ? <p className="font-weight-bold alert alert-danger text-center mt-4">Hubo Un Error</p> : null}
-                {cargando ? <Loading/> : null}
+                {cargando ? <BoxLoading/> : null}
                 <table className="table table-dark table-hover">
                     <thead>
                         <tr>

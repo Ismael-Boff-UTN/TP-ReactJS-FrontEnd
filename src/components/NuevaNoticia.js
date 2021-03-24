@@ -21,7 +21,6 @@ const NuevaNoticia = (props) => {
   });
 
   useEffect(() => {
-    //constultar api
     const obtenerEmpresas = () => dispatch(obtenerEmpresasAction());
     obtenerEmpresas();
   }, []);
@@ -36,8 +35,8 @@ const NuevaNoticia = (props) => {
       [e.target.name]: e.target.value,
     });
   };
-  //Extraer Noticia
 
+  //Extraer Noticia
   const {
     tituloNoticia,
     resumenNoticia,
@@ -65,9 +64,10 @@ const NuevaNoticia = (props) => {
       return;
     }
 
-    //crear empresa
+    //Erear Empresa
     agregarNoticia(noticia);
-
+    //Redireccion A Lista De Noticias
+    history.push("/lista-noticias");
     //Reset Form
   };
 
@@ -146,8 +146,7 @@ const NuevaNoticia = (props) => {
             </div>
             <h4 className="mt-3">Preview Imagen</h4>
             <div className="row mt-3">
-              <div className='col'>
-               
+              <div className="col">
                 <div
                   class="card"
                   style={{ maxWidth: "10rem", maxHeight: "10rem" }}

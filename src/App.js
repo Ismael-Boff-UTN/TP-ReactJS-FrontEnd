@@ -1,3 +1,4 @@
+//Componentes
 import ListadoEmpresas from './components/ListadoEmpresas';
 import NuevaEmpresa from './components/NuevaEmpresa';
 import EditarEmpresa from './components/EditarEmpresa';
@@ -6,21 +7,17 @@ import NuevaNoticia from './components/NuevaNoticia';
 import HomeEmpresa from './components/HomeEmpresa';
 import ListadoNoticias from './components/ListadoNoticias';
 import NoticiaDetalles from './components/NoticiaDetalles';
+//React Router DOM
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
 //REDUX
 import { Provider } from 'react-redux';
 import store from './store';
-
-
-
 
 function App() {
   return (
     <BrowserRouter>
       <Provider store={store}>
         <Switch>
-
           <Route exact path="/" component={ListadoEmpresas} />
           <Route exact path="/nueva-empresa" component={NuevaEmpresa} />
           <Route exact path="/editar-empresa/:id" component={EditarEmpresa} />

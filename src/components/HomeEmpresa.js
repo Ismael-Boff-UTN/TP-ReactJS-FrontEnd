@@ -5,7 +5,7 @@ import "../assets/vendor/icofont/icofont.min.css";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { obtenerNoticiaEditar } from "../actions/noticiasActions";
-import Loading from "./Loading";
+import { BoxLoading } from 'react-loadingg';
 
 const HomeEmpresa = (props) => {
   const dispatch = useDispatch();
@@ -60,7 +60,7 @@ const HomeEmpresa = (props) => {
   return (
     <>
       {cargando ? (
-        <Loading />
+        <BoxLoading />
       ) : (
         <div>
           {/* Header */}
@@ -108,15 +108,15 @@ const HomeEmpresa = (props) => {
                     <a href="#contact">Donde Estamos</a>
                   </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
+                <form className="form-inline my-2 my-lg-0">
                   <input
-                    class="form-control mr-sm-2"
+                    className="form-control mr-sm-2"
                     type="search"
                     placeholder="Ej. Mendoza"
                     aria-label="Search"
                   />
                   <button
-                    class="btn btn-outline-success my-2 my-sm-0"
+                    className="btn btn-outline-success my-2 my-sm-0"
                     type="submit"
                   >
                     Buscar

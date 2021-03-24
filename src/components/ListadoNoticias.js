@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Noticia from "./Noticia";
 import { useDispatch, useSelector } from "react-redux";
 import { obtenerNoticiasAction } from "../actions/noticiasActions";
+import { BoxLoading } from "react-loadingg";
 
 const ListadoNoticias = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,8 @@ const ListadoNoticias = () => {
       </nav>
       <div className="container">
         <h1 className="text-center">Lista De Noticias</h1>
-
+        {error ? <p className="font-weight-bold alert alert-danger text-center mt-4">Hubo Un Error</p> : null}
+        {cargando ? <BoxLoading /> : null}
         <div className="table-responsive-sm">
           <table className="table table-dark table-hover">
             <thead>
